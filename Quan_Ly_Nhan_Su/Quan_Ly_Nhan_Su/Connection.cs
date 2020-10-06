@@ -8,7 +8,8 @@ using System.Data;
 using System.Configuration;
 using System.Windows.Forms;
 
-namespace QuanLyNhanSu
+
+namespace Quan_Ly_Nhan_Su
 {
     class Connection
     {
