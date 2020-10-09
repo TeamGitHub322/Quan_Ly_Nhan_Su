@@ -65,6 +65,10 @@ namespace Quan_Ly_Nhan_Su
                     frm.Show();
                     this.Hide();
                }
+               else
+               {
+                    MessageBox.Show("Đăng nhập thất bại!");
+               }
           }
      }
 }
