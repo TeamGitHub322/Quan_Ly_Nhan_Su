@@ -1,0 +1,3 @@
+<connectionStrings>
+        <add name="Conn" connectionString="Data Source=DESKTOP-6DIRH3U\SQLEXPRESS02;Initial Catalog=QUAN_LY_NHAN_SU;user id=sa;password=123456;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False" providerName="System.Data.SqlClient" />
+    </connectionStrings>
