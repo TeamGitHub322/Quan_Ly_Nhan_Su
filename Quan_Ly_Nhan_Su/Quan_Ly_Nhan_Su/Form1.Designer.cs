@@ -33,12 +33,13 @@
                this.button3 = new System.Windows.Forms.Button();
                this.button2 = new System.Windows.Forms.Button();
                this.button1 = new System.Windows.Forms.Button();
+               this.label1 = new System.Windows.Forms.Label();
                this.SuspendLayout();
                // 
                // button5
                // 
-               this.button5.BackgroundImage = global::Quan_Ly_Nhan_Su.Properties.Resources.divide;
-               this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.button5.BackgroundImage = global::Quan_Ly_Nhan_Su.Properties.Resources.Clock_icon;
+               this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.button5.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
                this.button5.Location = new System.Drawing.Point(635, 274);
                this.button5.Name = "button5";
@@ -51,8 +52,8 @@
                // 
                // button4
                // 
-               this.button4.BackgroundImage = global::Quan_Ly_Nhan_Su.Properties.Resources.office;
-               this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.button4.BackgroundImage = global::Quan_Ly_Nhan_Su.Properties.Resources.buttonItemTopDanhSachPhongBan_Image;
+               this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.button4.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
                this.button4.Location = new System.Drawing.Point(479, 274);
                this.button4.Name = "button4";
@@ -93,8 +94,8 @@
                // 
                // button1
                // 
-               this.button1.BackgroundImage = global::Quan_Ly_Nhan_Su.Properties.Resources.employee;
-               this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.button1.BackgroundImage = global::Quan_Ly_Nhan_Su.Properties.Resources.user;
+               this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.button1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
                this.button1.Location = new System.Drawing.Point(16, 274);
                this.button1.Name = "button1";
@@ -105,12 +106,26 @@
                this.button1.UseVisualStyleBackColor = true;
                this.button1.Click += new System.EventHandler(this.button1_Click);
                // 
+               // label1
+               // 
+               this.label1.AutoSize = true;
+               this.label1.BackColor = System.Drawing.Color.Transparent;
+               this.label1.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.label1.ForeColor = System.Drawing.Color.Lime;
+               this.label1.Location = new System.Drawing.Point(172, 44);
+               this.label1.Name = "label1";
+               this.label1.Size = new System.Drawing.Size(457, 55);
+               this.label1.TabIndex = 9;
+               this.label1.Text = "Quản lý nhân sự_322";
+               // 
                // Form1
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.BackgroundImage = global::Quan_Ly_Nhan_Su.Properties.Resources.QLNS;
+               this.BackgroundImage = global::Quan_Ly_Nhan_Su.Properties.Resources.QLNS_Nhanvien;
+               this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                this.ClientSize = new System.Drawing.Size(800, 450);
+               this.Controls.Add(this.label1);
                this.Controls.Add(this.button5);
                this.Controls.Add(this.button4);
                this.Controls.Add(this.button3);
@@ -119,6 +134,7 @@
                this.Name = "Form1";
                this.Text = "Form1";
                this.ResumeLayout(false);
+               this.PerformLayout();
 
           }
 
@@ -129,6 +145,7 @@
           private System.Windows.Forms.Button button3;
           private System.Windows.Forms.Button button2;
           private System.Windows.Forms.Button button1;
+          private System.Windows.Forms.Label label1;
      }
 }
 
