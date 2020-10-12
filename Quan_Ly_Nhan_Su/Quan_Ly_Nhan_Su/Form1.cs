@@ -44,5 +44,13 @@ namespace Quan_Ly_Nhan_Su
           {
 
           }
+
+          private void btHelp_Click(object sender, EventArgs e)
+          {
+               frmHuongDan frm = new frmHuongDan();
+               frm.ShowDialog();
+               frm.Close();
+               frm.Dispose();
+          }
      }
 }
