@@ -142,19 +142,19 @@ namespace Quan_Ly_Nhan_Su
         }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                int index = listView1.SelectedItems[0].Index;
-                textID.Text = table.Rows[index][0].ToString();
-                textName.Text = table.Rows[index][1].ToString();
-                textDoB.Text = table.Rows[index][2].ToString().Substring(0,11);
-                if (table.Rows[index][3].ToString().Trim() == "Nam") radM.Checked = true;
-                else radF.Checked = true;
-                textAddress.Text = table.Rows[index][4].ToString();
-                textSalary.Text = table.Rows[index][5].ToString();
-                textWork.Text = table.Rows[index][6].ToString();
-                textManager.Text = table.Rows[index][7].ToString();
-            }
+            //if (listView1.SelectedItems.Count > 0)
+            //{
+            //    int index = listView1.SelectedItems[0].Index;
+            //    textID.Text = table.Rows[index][0].ToString();
+            //    textName.Text = table.Rows[index][1].ToString();
+            //    textDoB.Text = table.Rows[index][2].ToString().Substring(0,11);
+            //    if (table.Rows[index][3].ToString().Trim() == "Nam") radM.Checked = true;
+            //    else radF.Checked = true;
+            //    textAddress.Text = table.Rows[index][4].ToString();
+            //    textSalary.Text = table.Rows[index][5].ToString();
+            //    textWork.Text = table.Rows[index][6].ToString();
+            //    textManager.Text = table.Rows[index][7].ToString();
+            //}
         }
 
         private void radView_CheckedChanged(object sender, EventArgs e)
@@ -187,23 +187,23 @@ namespace Quan_Ly_Nhan_Su
 
         private void btnFree_Click(object sender, EventArgs e)
         {
-            //if (btnFree.Text == "Add")
-            //{
-            //    if (check(1) == false) return;
-            //    string gt = "Nu";
-            //    if (radM.Checked == true) gt = "Nam";
-            //    connector.InsertUpdateObject("AddObject","1",textID.Text,textWork.Text,textManager.Text,textName.Text,textAddress.Text,textDoB.Text,gt,"",textSalary.Text,"");
-            //    MessageBox.Show("Inserting completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //else
-            //{
-            //    if (check(2) == false) return;
-            //    string gt = "Nu";
-            //    if (radM.Checked == true) gt = "Nam";
-            //    connector.InsertUpdateObject("EditObject","1",textID.Text,textWork.Text,textManager.Text,textName.Text,textAddress.Text,textDoB.Text,gt,"",textSalary.Text,"");
-            //    MessageBox.Show("Updating completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //reset();
+            if (btnFree.Text == "Add")
+            {
+                if (check(1) == false) return;
+                string gt = "Nu";
+                if (radM.Checked == true) gt = "Nam";
+                connector.InsertUpdateObject("AddObject", "1", textID.Text, textWork.Text, textManager.Text, textName.Text, textAddress.Text, textDoB.Text, gt, "", textSalary.Text, "");
+                MessageBox.Show("Inserting completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (check(2) == false) return;
+                string gt = "Nu";
+                if (radM.Checked == true) gt = "Nam";
+                connector.InsertUpdateObject("EditObject", "1", textID.Text, textWork.Text, textManager.Text, textName.Text, textAddress.Text, textDoB.Text, gt, "", textSalary.Text, "");
+                MessageBox.Show("Updating completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            reset();
         }
 
         private void butDel_Click(object sender, EventArgs e)
