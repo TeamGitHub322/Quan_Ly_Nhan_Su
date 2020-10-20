@@ -187,23 +187,23 @@ namespace Quan_Ly_Nhan_Su
 
         private void btnFree_Click(object sender, EventArgs e)
         {
-            if (btnFree.Text == "Add")
-            {
-                if (check(1) == false) return;
-                string gt = "Nu";
-                if (radM.Checked == true) gt = "Nam";
-                connector.InsertUpdateObject("AddObject","1",textID.Text,textWork.Text,textManager.Text,textName.Text,textAddress.Text,textDoB.Text,gt,"",textSalary.Text,"");
-                MessageBox.Show("Inserting completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                if (check(2) == false) return;
-                string gt = "Nu";
-                if (radM.Checked == true) gt = "Nam";
-                connector.InsertUpdateObject("EditObject","1",textID.Text,textWork.Text,textManager.Text,textName.Text,textAddress.Text,textDoB.Text,gt,"",textSalary.Text,"");
-                MessageBox.Show("Updating completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            reset();
+            //if (btnFree.Text == "Add")
+            //{
+            //    if (check(1) == false) return;
+            //    string gt = "Nu";
+            //    if (radM.Checked == true) gt = "Nam";
+            //    connector.InsertUpdateObject("AddObject","1",textID.Text,textWork.Text,textManager.Text,textName.Text,textAddress.Text,textDoB.Text,gt,"",textSalary.Text,"");
+            //    MessageBox.Show("Inserting completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //else
+            //{
+            //    if (check(2) == false) return;
+            //    string gt = "Nu";
+            //    if (radM.Checked == true) gt = "Nam";
+            //    connector.InsertUpdateObject("EditObject","1",textID.Text,textWork.Text,textManager.Text,textName.Text,textAddress.Text,textDoB.Text,gt,"",textSalary.Text,"");
+            //    MessageBox.Show("Updating completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //reset();
         }
 
         private void butDel_Click(object sender, EventArgs e)
