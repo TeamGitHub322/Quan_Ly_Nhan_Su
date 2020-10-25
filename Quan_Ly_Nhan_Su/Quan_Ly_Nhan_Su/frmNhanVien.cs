@@ -105,16 +105,16 @@ namespace Quan_Ly_Nhan_Su
 
         private void reset()
         {
-            listView1.Items.Clear();
-            table = new DataTable();
-            table = connector.LoadData("1");
-            int i = 0;
-            foreach (DataRow row in table.Rows)
-            {
-                listView1.Items.Add(row[0].ToString());
-                listView1.Items[i].SubItems.Add(row[1].ToString());
-                i++;
-            }
+            //listView1.Items.Clear();
+            //table = new DataTable();
+            //table = connector.LoadData("1");
+            //int i = 0;
+            //foreach (DataRow row in table.Rows)
+            //{
+            //    listView1.Items.Add(row[0].ToString());
+            //    listView1.Items[i].SubItems.Add(row[1].ToString());
+            //    i++;
+            //}
         }
 
         private void reset2()
@@ -132,29 +132,29 @@ namespace Quan_Ly_Nhan_Su
 
         private void reset3()
         {
-            table2 = new DataTable();
-            table2 = connector.LoadData("4");
-            IDstring = "";
-            foreach (DataRow row in table.Rows)
-            {
-                IDstring = IDstring + row[0].ToString().Trim() + "/";
-            }
+            //table2 = new DataTable();
+            //table2 = connector.LoadData("4");
+            //IDstring = "";
+            //foreach (DataRow row in table.Rows)
+            //{
+            //    IDstring = IDstring + row[0].ToString().Trim() + "/";
+            //}
         }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (listView1.SelectedItems.Count > 0)
-            //{
-            //    int index = listView1.SelectedItems[0].Index;
-            //    textID.Text = table.Rows[index][0].ToString();
-            //    textName.Text = table.Rows[index][1].ToString();
-            //    textDoB.Text = table.Rows[index][2].ToString().Substring(0,11);
-            //    if (table.Rows[index][3].ToString().Trim() == "Nam") radM.Checked = true;
-            //    else radF.Checked = true;
-            //    textAddress.Text = table.Rows[index][4].ToString();
-            //    textSalary.Text = table.Rows[index][5].ToString();
-            //    textWork.Text = table.Rows[index][6].ToString();
-            //    textManager.Text = table.Rows[index][7].ToString();
-            //}
+            if (listView1.SelectedItems.Count > 0)
+            {
+                int index = listView1.SelectedItems[0].Index;
+                textID.Text = table.Rows[index][0].ToString();
+                textName.Text = table.Rows[index][1].ToString();
+                textDoB.Text = table.Rows[index][2].ToString().Substring(0, 11);
+                if (table.Rows[index][3].ToString().Trim() == "Nam") radM.Checked = true;
+                else radF.Checked = true;
+                textAddress.Text = table.Rows[index][4].ToString();
+                textSalary.Text = table.Rows[index][5].ToString();
+                textWork.Text = table.Rows[index][6].ToString();
+                textManager.Text = table.Rows[index][7].ToString();
+            }
         }
 
         private void radView_CheckedChanged(object sender, EventArgs e)
