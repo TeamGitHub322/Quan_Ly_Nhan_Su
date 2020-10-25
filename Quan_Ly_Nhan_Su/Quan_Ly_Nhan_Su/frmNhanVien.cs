@@ -105,16 +105,16 @@ namespace Quan_Ly_Nhan_Su
 
         private void reset()
         {
-            //listView1.Items.Clear();
-            //table = new DataTable();
-            //table = connector.LoadData("1");
-            //int i = 0;
-            //foreach (DataRow row in table.Rows)
-            //{
-            //    listView1.Items.Add(row[0].ToString());
-            //    listView1.Items[i].SubItems.Add(row[1].ToString());
-            //    i++;
-            //}
+            listView1.Items.Clear();
+            table = new DataTable();
+            table = connector.LoadData("1");
+            int i = 0;
+            foreach (DataRow row in table.Rows)
+            {
+                listView1.Items.Add(row[0].ToString());
+                listView1.Items[i].SubItems.Add(row[1].ToString());
+                i++;
+            }
         }
 
         private void reset2()
@@ -132,13 +132,13 @@ namespace Quan_Ly_Nhan_Su
 
         private void reset3()
         {
-            //table2 = new DataTable();
-            //table2 = connector.LoadData("4");
-            //IDstring = "";
-            //foreach (DataRow row in table.Rows)
-            //{
-            //    IDstring = IDstring + row[0].ToString().Trim() + "/";
-            //}
+            table2 = new DataTable();
+            table2 = connector.LoadData("4");
+            IDstring = "";
+            foreach (DataRow row in table.Rows)
+            {
+                IDstring = IDstring + row[0].ToString().Trim() + "/";
+            }
         }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -208,16 +208,16 @@ namespace Quan_Ly_Nhan_Su
 
         private void butDel_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                connector.DeleteObject("1", textID.Text.Trim(), "");
-                if (butSearch.Text.Trim() == "Search Mode")
-                {
-                    reset2();
-                }
-                else reset();
-                MessageBox.Show("Deleting completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //if (listView1.SelectedItems.Count > 0)
+            //{
+            //    connector.DeleteObject("1", textID.Text.Trim(), "");
+            //    if (butSearch.Text.Trim() == "Search Mode")
+            //    {
+            //        reset2();
+            //    }
+            //    else reset();
+            //    MessageBox.Show("Deleting completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
 
         private void butSearch_Click(object sender, EventArgs e)
@@ -233,11 +233,11 @@ namespace Quan_Ly_Nhan_Su
                 butSearch.Text = "Normal Mode";
                 reset2();
             }
-            else
-            {
-                butSearch.Text = "Search Mode";
-                reset();
-            }
+            //else
+            //{
+            //    butSearch.Text = "Search Mode";
+            //    reset();
+            //}
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
