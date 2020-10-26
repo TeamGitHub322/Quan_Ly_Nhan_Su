@@ -208,16 +208,16 @@ namespace Quan_Ly_Nhan_Su
 
         private void butDel_Click(object sender, EventArgs e)
         {
-            //if (listView1.SelectedItems.Count > 0)
-            //{
-            //    connector.DeleteObject("1", textID.Text.Trim(), "");
-            //    if (butSearch.Text.Trim() == "Search Mode")
-            //    {
-            //        reset2();
-            //    }
-            //    else reset();
-            //    MessageBox.Show("Deleting completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+            if (listView1.SelectedItems.Count > 0)
+            {
+                connector.DeleteObject("1", textID.Text.Trim(), "");
+                if (butSearch.Text.Trim() == "Search Mode")
+                {
+                    reset2();
+                }
+                else reset();
+                MessageBox.Show("Deleting completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void butSearch_Click(object sender, EventArgs e)
@@ -233,11 +233,11 @@ namespace Quan_Ly_Nhan_Su
                 butSearch.Text = "Normal Mode";
                 reset2();
             }
-            //else
-            //{
-            //    butSearch.Text = "Search Mode";
-            //    reset();
-            //}
+            else
+            {
+                butSearch.Text = "Search Mode";
+                reset();
+            }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
