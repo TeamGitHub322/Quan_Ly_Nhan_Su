@@ -157,33 +157,6 @@ namespace Quan_Ly_Nhan_Su
             }
         }
 
-        private void radView_CheckedChanged(object sender, EventArgs e)
-        {
-            RadioButton rad = (RadioButton)(sender);
-            if (rad.Checked == true)
-            {
-                btnFree.Text = rad.Text;
-                if (rad.Text == "View")
-                {
-                    btnFree.Enabled = false;
-                    textDoB.ReadOnly = textName.ReadOnly = textID.ReadOnly = textManager.ReadOnly = textAddress.ReadOnly = textSalary.ReadOnly = textWork.ReadOnly = true;
-                    radF.Enabled = radM.Enabled = false;
-                }
-                else
-                {
-                    btnFree.Enabled = true;
-                    textID.ReadOnly = true;
-                    textDoB.ReadOnly = textName.ReadOnly = textManager.ReadOnly = textAddress.ReadOnly = textSalary.ReadOnly = textWork.ReadOnly = false;
-                    radF.Enabled = radM.Enabled = true;
-                    if (rad.Text == "Add")
-                    {
-                        textID.ReadOnly = false;
-                        textDoB.Text = textName.Text = textID.Text = textManager.Text = textAddress.Text = textSalary.Text = textWork.Text = "";
-                        radM.Checked = true;
-                    }
-                }
-            }
-        }
 
         private void btnFree_Click(object sender, EventArgs e)
         {
@@ -206,18 +179,14 @@ namespace Quan_Ly_Nhan_Su
             reset();
         }
 
+        private void radView_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         private void butDel_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                connector.DeleteObject("1", textID.Text.Trim(), "");
-                if (butSearch.Text.Trim() == "Search Mode")
-                {
-                    reset2();
-                }
-                else reset();
-                MessageBox.Show("Deleting completed", "^...^", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
         }
 
         private void butSearch_Click(object sender, EventArgs e)
