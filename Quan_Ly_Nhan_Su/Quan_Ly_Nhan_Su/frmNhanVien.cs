@@ -181,7 +181,16 @@ namespace Quan_Ly_Nhan_Su
 
         private void radView_CheckedChanged(object sender, EventArgs e)
         {
-            
+            RadioButton rad = (RadioButton)(sender);
+            if (rad.Checked == true)
+            {
+                btnFree.Text = rad.Text;
+                    btnFree.Enabled = true;
+                    textID.ReadOnly = true;
+                    textDoB.ReadOnly = textName.ReadOnly = textManager.ReadOnly = textAddress.ReadOnly = textSalary.ReadOnly = textWork.ReadOnly = false;
+                    radF.Enabled = radM.Enabled = true;
+                
+            } 
         }
 
         private void butDel_Click(object sender, EventArgs e)
@@ -200,13 +209,11 @@ namespace Quan_Ly_Nhan_Su
                     return;
                 }
                 butSearch.Text = "Normal Mode";
-                reset2();
+  
             }
             else
-            {
                 butSearch.Text = "Search Mode";
-                reset();
-            }
+     
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
